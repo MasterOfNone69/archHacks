@@ -1357,10 +1357,6 @@ chartjs-color@~2.2.0:
     chartjs-color-string "^0.5.0"
     color-convert "^0.5.3"
 
-chartjs@^0.3.24:
-  version "0.3.24"
-  resolved "https://registry.yarnpkg.com/chartjs/-/chartjs-0.3.24.tgz#3addeb5ae3606b3e89e346c27d52ca158416e93d"
-
 chokidar@^1.6.0, chokidar@^1.7.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-1.7.0.tgz#798e689778151c8076b4b360e5edd28cda2bb468"
@@ -5258,10 +5254,6 @@ react-chartjs-2@^2.6.4:
     lodash "^4.17.4"
     prop-types "^15.5.8"
 
-react-chartjs@^0.8.0:
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/react-chartjs/-/react-chartjs-0.8.0.tgz#d41386b3d3cbfef9003f5a655e7ea48a49fbfa19"
-
 react-custom-scrollbars@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/react-custom-scrollbars/-/react-custom-scrollbars-4.2.0.tgz#cb01aef03c413de9af9e99a1722c04e9350bb3f4"
@@ -5314,10 +5306,6 @@ react-error-overlay@^2.0.2:
     react-dom "^15 || ^16"
     settle-promise "1.0.0"
     source-map "0.5.6"
-
-react-google-static-map-2@^0.1.4:
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/react-google-static-map-2/-/react-google-static-map-2-0.1.4.tgz#b04800c5de1555ed9b9d3fcec7d511a242f3301a"
 
 react-overlays@^0.7.4:
   version "0.7.4"

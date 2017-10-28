@@ -6,7 +6,7 @@ import DataDisplay from './DataDisplay';
 class Data extends Component {
   constructor(props){
     super(props);
-    this.state = {windowHeight: 1000, windowWidth: 300}
+    this.state = {windowHeight: 1000, windowWidth: 300};
   }
 
   componentWillMount(){

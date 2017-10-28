@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 .App {
     width: 100vw;
     height: 100vh;
@@ -73,5 +75,6 @@
 
 .dataContentInner{
     width: 100%;
-    border: 1px solid #000000;
+    font-family: 'Roboto', sans-serif;
+    /*border: 1px solid #000000;*/
 }
