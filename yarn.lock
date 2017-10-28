@@ -5279,6 +5279,10 @@ react-error-overlay@^2.0.2:
     settle-promise "1.0.0"
     source-map "0.5.6"
 
+react-google-static-map-2@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/react-google-static-map-2/-/react-google-static-map-2-0.1.4.tgz#b04800c5de1555ed9b9d3fcec7d511a242f3301a"
+
 react-overlays@^0.7.4:
   version "0.7.4"
   resolved "https://registry.yarnpkg.com/react-overlays/-/react-overlays-0.7.4.tgz#ef2ec652c3444ab8aa014262b18f662068e56d5c"

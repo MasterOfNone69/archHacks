@@ -1,28 +1,77 @@
 .App {
-  text-align: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.pageContainer{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #E8E8E8;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.searchBox{
+    width: 50vw;
+    height: 100px;
+    position: fixed;
+    top: 30vh;
+    left: 25vw;
 }
 
-.App-title {
-  font-size: 1.5em;
+.searchInput{
+    float: left;
+    width: calc(100% - 130px);
 }
 
-.App-intro {
-  font-size: large;
+.searchButton{
+    float: left;
+    width: 120px;
+    margin-left: 10px;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.staticMap{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 40vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+    z-index: 0;
+}
+
+.locationTitle{
+    position: absolute;
+    top: 5vh;
+    left: 5vh;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+
+}
+
+.dataContent{
+    margin-top: 40vh;
+    min-height: 100vh;
+    width: 100vw;
+    z-index: 1;
+    background-color: #E8E8E8;
+    box-shadow: 0 -2px 20px 0 rgba(0,0,0,0.75);
+    padding-top: 50px;
+}
+
+.searchAgainButton{
+    position: relative;
+    width: 110px;
+    left: calc(50% - 55px);
+}
+
+.dataContentInner{
+    width: 100%;
+    border: 1px solid #000000;
 }
