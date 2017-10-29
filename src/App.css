@@ -15,7 +15,7 @@
     background-color: #f0eaea;
     background-image: url("tinyTown.png");
     background-size: cover;
-    background-position: center bottom;
+    background-position: center;
     background-repeat: no-repeat;
 }
 
@@ -68,7 +68,7 @@
     top: 20px;
     width: 40vw;
     left: 30vw;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: bold;
     background-color: rgba(255, 255, 255, 0.5);
     padding: 10px;
@@ -82,7 +82,7 @@
     z-index: 1;
     background-color: #E8E8E8;
     box-shadow: 0 -2px 20px 0 rgba(0,0,0,0.75);
-    padding-top: 50px;
+    padding-top: 10px;
 }
 
 .searchAgainButton{

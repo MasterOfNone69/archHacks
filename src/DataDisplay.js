@@ -91,7 +91,7 @@ class DataDisplay extends Component {
 
               </Col>
               <Col lg={4} md={4} sm={4}>
-                texto
+                <p>EQI stands for “environmental quality data”,  and gives locations a rating based on a variety of factors. EQI is broken down into 5 components, air, water, land, built, and sociodemographic environments.</p>
               </Col>
             </Row>
             
@@ -104,9 +104,9 @@ class DataDisplay extends Component {
             </Row>
             <Row>
               <Col lg={4} md={4} sm={4}>
-                texto
+                The percentage of excess deaths broken down by rural and metropolitan data, calculated by the number of projected deaths for the area.
               </Col>
-              <Col md={12} lg={12} sm={12}>
+              <Col md={8} lg={8} sm={8}>
                 <Radar data={{
                   labels: ["Heart", "Respiratory", "Injury", "Stroke", "Cancer"],
                   datasets: [{
@@ -166,6 +166,20 @@ class DataDisplay extends Component {
                   }]
                 }} />
 
+              </Col>
+            </Row>
+            <Row>
+              <Col lg={12} md={12} sm={12}>
+                <h2>Sources</h2>
+                <a href="https://catalog.data.gov/dataset/usepa-environmental-quality-index-eqi-air-water-land-built-and-sociodemographic-domains-transf" target="_blank">
+                  https://catalog.data.gov/dataset/usepa-environmental-quality-index-eqi-air-water-land-built-and-sociodemographic-domains-transf
+                </a>
+                <br />
+                <a href="https://catalog.data.gov/dataset/nchs-potentially-excess-deaths-from-the-five-leading-causes-of-death" target="_blank">
+                  https://catalog.data.gov/dataset/nchs-potentially-excess-deaths-from-the-five-leading-causes-of-death
+                </a>
+                <br />
+                <br />
               </Col>
             </Row>
           </Grid>
