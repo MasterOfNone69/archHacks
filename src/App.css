@@ -12,7 +12,7 @@
     height: 100vh;
     margin: 0;
     padding: 0;
-    background-color: #E8E8E8;
+    background-color: #A4A8D1;
 }
 
 .searchBox{
@@ -32,6 +32,7 @@
     float: left;
     width: 120px;
     margin-left: 10px;
+    color: 
 }
 
 .staticMap{

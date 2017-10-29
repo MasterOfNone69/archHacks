@@ -9,18 +9,18 @@ class DataDisplay extends Component {
             <Grid>                            
               
             <Row>
-                <Col md={3}>
+                <Col md={3} lg={3}>
                     <p>Here is the Donut Chart.</p>
                     <ul>
                         <li> "Learning New things" </li>
                         <li> "lots of herpes here..." </li>
                     </ul>
                 </Col>
-                <Col md={7}>
+                <Col md={7} lg={7}>
                     <Doughnut data={{
                         labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
                         datasets: [{
-                          label: '# of Votes',
+                          label: "# of Votes",
                           data: [12, 19, 3, 5, 2, 3],
                           backgroundColor: [
                             'rgba(255, 99, 132, 0.2)',
@@ -49,7 +49,7 @@ class DataDisplay extends Component {
             <br></br>
 
             <Row>
-                <Col md={7}>
+                <Col md={7} lg={7}>
                 
                 <Radar data={{
                         labels: ["Air Quality", "Heart Disease", "STDs", "Access"],
@@ -82,7 +82,7 @@ class DataDisplay extends Component {
                       }} />
 
                 </Col>
-                <Col md={3}>
+                <Col md={3} lg={3}>
                     <p>Here is the Radar Chart.</p>
                         <ul>
                             <li> "Learning New things" </li>
@@ -95,14 +95,14 @@ class DataDisplay extends Component {
             <br></br>
 
             <Row>
-                <Col md={3}>
+                <Col md={3} lg={3}>
                     <p>Here is the Donut Chart.</p>
                     <ul>
                         <li> "Learning New things" </li>
                         <li> "lots of herpes here..." </li>
                     </ul>
                 </Col>
-                <Col md={7}>
+                <Col md={7} lg={7}>
                     <Polar data={{
                         labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
                         datasets: [{
@@ -135,7 +135,7 @@ class DataDisplay extends Component {
             <br></br>
 
             <Row>
-                <Col md={7}>
+                <Col md={7} lg={7}>
                 
                 <Bubble data={{
                         labels: ["Red", "Blue"],
@@ -165,7 +165,7 @@ class DataDisplay extends Component {
                 <br></br>
                 <br></br>
                 <br></br>
-                <Col md={3}>
+                <Col md={3} lg={3}>
                     <p>Here is the Radar Chart.</p>
                         <ul>
                             <li> "Learning New things" </li>
@@ -174,6 +174,9 @@ class DataDisplay extends Component {
                     </Col> 
             </Row>
             </Grid>
+            <br></br>
+            <br></br>
+            <br></br>
         </div>
     );
     
