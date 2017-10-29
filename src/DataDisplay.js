@@ -1,169 +1,170 @@
-import React, { Component } from 'react';
-import {Doughnut, Radar, Polar, Bubble} from 'react-chartjs-2';
-import {Grid, Col, Row} from 'react-bootstrap';
+import React, {Component} from 'react';
+import {Bar} from 'react-chartjs-2';
+import {Grid, Col, Row, PageHeader} from 'react-bootstrap';
+
 class DataDisplay extends Component {
 
-  render(){
+  render() {
     console.log(this.props);
-    return(
+    return (
         <div className="dataContentInner">
-            <Grid fluid>
-              <Row>
-                  <Col md={3} lg={3}>
-                      <p>Here is the Donut Chart.</p>
-                      <ul>
-                          <li> "Learning New things" </li>
-                          <li> "lots of herpes here..." </li>
-                      </ul>
-                  </Col>
-                  <Col md={7} lg={7}>
-                      <Doughnut data={{
-                          labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-                          datasets: [{
-                            label: "# of Votes",
-                            data: [12, 19, 3, 5, 2, 3],
-                            backgroundColor: [
-                              'rgba(255, 99, 132, 0.2)',
-                              'rgba(54, 162, 235, 0.2)',
-                              'rgba(255, 206, 86, 0.2)',
-                              'rgba(75, 192, 192, 0.2)',
-                              'rgba(153, 102, 255, 0.2)',
-                              'rgba(255, 159, 64, 0.2)'
-                            ],
-                            borderColor: [
-                              'rgba(255,99,132,1)',
-                              'rgba(54, 162, 235, 1)',
-                              'rgba(255, 206, 86, 1)',
-                              'rgba(75, 192, 192, 1)',
-                              'rgba(153, 102, 255, 1)',
-                              'rgba(255, 159, 64, 1)'
-                            ],
-                            borderWidth: 1
-                          }]
-                        }} />
+          <Grid fluid>
+            <Row>
+              <Col lg={12} md={12} sm={12}>
+                <PageHeader>
+                  Environmental Risk Factors
+                </PageHeader>
+              </Col>
+            </Row>
+            <Row>
+              <Col md={12} lg={12} sm={12}>
+                <Bar data={{
+                  labels: ["Water Quality", "Air Quality", "Land Quality", "Built Quality", "Social Quality", "Overall Quality", "Superfund Sites"],
+                  datasets: [{
+                    label: this.props.data.city.city,
+                    data: [this.props.data.city.waterEQI, this.props.data.city.airEQI, this.props.data.city.landEQi, this.props.data.city.builtEQI, this.props.data.city.socialEQI, this.props.data.city.totalEQI, this.props.data.city.superfundSites],
+                    backgroundColor: [
+                      'rgba(255, 99, 132, 0.9)',
+                      'rgba(255, 99, 132, 0.9)',
+                      'rgba(255, 99, 132, 0.9)',
+                      'rgba(255, 99, 132, 0.9)',
+                      'rgba(255, 99, 132, 0.9)',
+                      'rgba(255, 99, 132, 0.9)',
+                      'rgba(255, 99, 132, 0.9)',
+                    ],
+                    borderColor: [
+                      'rgba(255,99,132,1)',
+                      'rgba(255,99,132,1)',
+                      'rgba(255,99,132,1)',
+                      'rgba(255,99,132,1)',
+                      'rgba(255,99,132,1)',
+                      'rgba(255,99,132,1)',
+                      'rgba(255,99,132,1)',
+                    ],
+                    borderWidth: 1
+                  },{
+                    label: this.props.data.city.state,
+                    data: [this.props.data.state.waterEQI, this.props.data.state.airEQI, this.props.data.state.landEQi, this.props.data.state.builtEQI, this.props.data.state.socialEQI, this.props.data.state.totalEQI, this.props.data.state.superfundSites],
+                    backgroundColor: [
+                      'rgba(54, 162, 235, 0.9)',
+                      'rgba(54, 162, 235, 0.9)',
+                      'rgba(54, 162, 235, 0.9)',
+                      'rgba(54, 162, 235, 0.9)',
+                      'rgba(54, 162, 235, 0.9)',
+                      'rgba(54, 162, 235, 0.9)',
+                      'rgba(54, 162, 235, 0.9)',
+                    ],
+                    borderColor: [
+                      'rgba(54, 162, 235, 1)',
+                      'rgba(54, 162, 235, 1)',
+                      'rgba(54, 162, 235, 1)',
+                      'rgba(54, 162, 235, 1)',
+                      'rgba(54, 162, 235, 1)',
+                      'rgba(54, 162, 235, 1)',
+                      'rgba(54, 162, 235, 1)',
+                    ],
+                    borderWidth: 1
+                  },{
+                    label: "United States",
+                    data: [this.props.data.country.waterEQI, this.props.data.country.airEQI, this.props.data.country.landEQi, this.props.data.country.builtEQI, this.props.data.country.socialEQI, this.props.data.country.totalEQI, this.props.data.country.superfundSites],
+                    backgroundColor: [
+                      'rgba(255, 206, 86, 0.9)',
+                      'rgba(255, 206, 86, 0.9)',
+                      'rgba(255, 206, 86, 0.9)',
+                      'rgba(255, 206, 86, 0.9)',
+                      'rgba(255, 206, 86, 0.9)',
+                      'rgba(255, 206, 86, 0.9)',
+                      'rgba(255, 206, 86, 0.9)',
+                    ],
+                    borderColor: [
+                      'rgba(255, 206, 86, 0.9)',
+                      'rgba(255, 206, 86, 0.9)',
+                      'rgba(255, 206, 86, 0.9)',
+                      'rgba(255, 206, 86, 0.9)',
+                      'rgba(255, 206, 86, 0.9)',
+                      'rgba(255, 206, 86, 0.9)',
+                      'rgba(255, 206, 86, 0.9)',
+                    ],
+                    borderWidth: 1
+                  }]
+                }} />
 
-                  </Col>
-              </Row>
-              <Row>
-                  <Col md={7} lg={7}>
+              </Col>
+            </Row>
+            <Row>
+              <Col lg={12} md={12} sm={12}>
+                <PageHeader>
+                  Mortality
+                </PageHeader>
+              </Col>
+            </Row>
+            <Row>
+              <Col md={12} lg={12} sm={12}>
+                <Bar data={{
+                  labels: ["Heart", "Respiratory", "Injury", "Stroke", "Cancer"],
+                  datasets: [{
+                    label: this.props.data.city.city,
+                    data: [this.props.data.city.Heart, this.props.data.city.Resp, this.props.data.city.Injury, this.props.data.city.Stroke, this.props.data.city.Cancer],
+                    backgroundColor: [
+                      'rgba(255, 99, 132, 0.9)',
+                      'rgba(255, 99, 132, 0.9)',
+                      'rgba(255, 99, 132, 0.9)',
+                      'rgba(255, 99, 132, 0.9)',
+                      'rgba(255, 99, 132, 0.9)',
+                    ],
+                    borderColor: [
+                      'rgba(255,99,132,1)',
+                      'rgba(255,99,132,1)',
+                      'rgba(255,99,132,1)',
+                      'rgba(255,99,132,1)',
+                      'rgba(255,99,132,1)',
+                    ],
+                    borderWidth: 1
+                  },{
+                    label: this.props.data.city.state,
+                    data: [this.props.data.state.Heart, this.props.data.state.Resp, this.props.data.state.Injury, this.props.data.state.Stroke, this.props.data.state.Cancer],
+                    backgroundColor: [
+                      'rgba(54, 162, 235, 0.9)',
+                      'rgba(54, 162, 235, 0.9)',
+                      'rgba(54, 162, 235, 0.9)',
+                      'rgba(54, 162, 235, 0.9)',
+                      'rgba(54, 162, 235, 0.9)',
+                    ],
+                    borderColor: [
+                      'rgba(54, 162, 235, 1)',
+                      'rgba(54, 162, 235, 1)',
+                      'rgba(54, 162, 235, 1)',
+                      'rgba(54, 162, 235, 1)',
+                      'rgba(54, 162, 235, 1)',
+                    ],
+                    borderWidth: 1
+                  },{
+                    label: "United States",
+                    data: [this.props.data.country.Heart, this.props.data.country.Resp, this.props.data.country.Injury, this.props.data.country.Stroke, this.props.data.country.Cancer],
+                    backgroundColor: [
+                      'rgba(255, 206, 86, 0.9)',
+                      'rgba(255, 206, 86, 0.9)',
+                      'rgba(255, 206, 86, 0.9)',
+                      'rgba(255, 206, 86, 0.9)',
+                      'rgba(255, 206, 86, 0.9)',
+                    ],
+                    borderColor: [
+                      'rgba(255, 206, 86, 0.9)',
+                      'rgba(255, 206, 86, 0.9)',
+                      'rgba(255, 206, 86, 0.9)',
+                      'rgba(255, 206, 86, 0.9)',
+                      'rgba(255, 206, 86, 0.9)',
+                    ],
+                    borderWidth: 1
+                  }]
+                }} />
 
-                  <Radar data={{
-                          labels: ["Air Quality", "Heart Disease", "STDs", "Access"],
-                          datasets: [{
-                            data: [
-                            12, 19, 3, 5, 21,
-                            ],
-                            backgroundColor: [
-                              'rgba(255, 99, 132, 0.2)',
-                            ],
-                            borderColor: [
-                              'rgba(255,99,132,1)',
-                            ],
-                            borderWidth: 2
-                          },
-                          {
-                            data: [
-                            9, 12 , 20, 5, 14,
-                            ],
-                            backgroundColor: [
-                              'rgba(54, 162, 235, 0.2)',
-                            ],
-                            borderColor: [
-                              'rgba(54, 162, 235, 1)',
-                            ],
-                            borderWidth: 2
-                          }
-                          ],
-
-                        }} />
-
-                  </Col>
-                  <Col md={3} lg={3}>
-                      <p>Here is the Radar Chart.</p>
-                          <ul>
-                              <li> "Learning New things" </li>
-                              <li> "lots of herpes here..." </li>
-                          </ul>
-                      </Col>
-              </Row>
-              <Row>
-                  <Col md={3} lg={3}>
-                      <p>Here is the Donut Chart.</p>
-                      <ul>
-                          <li> "Learning New things" </li>
-                          <li> "lots of herpes here..." </li>
-                      </ul>
-                  </Col>
-                  <Col md={7} lg={7}>
-                      <Polar data={{
-                          labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-                          datasets: [{
-                            label: '# of Votes',
-                            data: [12, 19, 3, 5, 2, 3],
-                            backgroundColor: [
-                              'rgba(255, 99, 132, 0.2)',
-                              'rgba(54, 162, 235, 0.2)',
-                              'rgba(255, 206, 86, 0.2)',
-                              'rgba(75, 192, 192, 0.2)',
-                              'rgba(153, 102, 255, 0.2)',
-                              'rgba(255, 159, 64, 0.2)'
-                            ],
-                            borderColor: [
-                              'rgba(255,99,132,1)',
-                              'rgba(54, 162, 235, 1)',
-                              'rgba(255, 206, 86, 1)',
-                              'rgba(75, 192, 192, 1)',
-                              'rgba(153, 102, 255, 1)',
-                              'rgba(255, 159, 64, 1)'
-                            ],
-                            borderWidth: 1
-                          }]
-                        }} />
-
-                  </Col>
-              </Row>
-              <Row>
-                  <Col md={7} lg={7}>
-
-                  <Bubble data={{
-                          labels: ["Red", "Blue"],
-                          datasets: [{
-                            data: [
-                              {x: 12, y: 5, r: 10},
-                              {x: 4, y: 7, r: 15},
-                              {x: 10, y: 20, r: 20},
-                              {x: 8,y: 8,r: 8},
-                            ],
-                            backgroundColor: [
-                              'rgba(255, 99, 132, 0.2)',
-                              'rgba(54, 162, 235, 0.2)',
-                              'rgba(54, 162, 235, 0.2)',
-                              'rgba(255, 99, 132, 0.2)',
-                            ],
-                            borderColor: [
-                              'rgba(255,99,132,1)',
-                              'rgba(54, 162, 235, 1)',
-                              'rgba(255,99,132,1)',
-                              'rgba(54, 162, 235, 1)',
-                            ],
-                            borderWidth: 1
-                          }]
-                        }} />
-                  </Col>
-                  <Col md={3} lg={3}>
-                      <p>Here is the Radar Chart.</p>
-                          <ul>
-                              <li> "Learning New things" </li>
-                              <li> "lots of herpes here..." </li>
-                          </ul>
-                      </Col>
-              </Row>
-            </Grid>
+              </Col>
+            </Row>
+          </Grid>
         </div>
     );
-    
-
   }
-
 }
-  export default DataDisplay;
+
+export default DataDisplay;

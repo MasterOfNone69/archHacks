@@ -23,7 +23,7 @@ class Data extends Component {
           zip: this.props.match.params.zipcode,
         }),
       }).then(resp => resp.json()).then(data => {
-        this.setState({windowHeight: window.innerHeight, windowWidth: window.innerWidth, data});
+        this.setState({windowHeight: window.innerHeight, windowWidth: window.innerWidth, data: data.data});
       }).catch(err => {
         this.props.history.push(`/`);
       });
@@ -34,17 +34,16 @@ class Data extends Component {
     return(
         <div className="pageContainer">
           <div className="staticMap" style={{backgroundImage:`url(https://maps.googleapis.com/maps/api/staticmap?size=${this.state.windowWidth}x${this.state.windowWidth}&center=${this.props.match.params.zipcode}&key=AIzaSyAQKGSHo-JvN3JCfRydHWXJiatCa4bWUis)`}}>
-            <div className="locationTitle">{this.props.match.params.zipcode}</div>
+            <div className="locationTitle">{this.state.data && `${this.state.data.city.city}, ${this.state.data.city.state}`}</div>
           </div>
+          <Button className="searchAgainButton" onClick={() => this.props.history.push(`/`)} bsStyle="primary">Search Again</Button>
           <Scrollbars style={{ width: '100vw', height: '100vh' }} autoHide>
             <div className="dataContent">
               <Grid fluid>
                 <Row>
-                  <Col lg={2} md={2} sm={1} xs={0}>
-                    <Button className="searchAgainButton" onClick={() => this.props.history.push(`/`)}>Search Again</Button>
-                  </Col>
+                  <Col lg={2} md={2} sm={1} xs={0} />
                   <Col lg={8} md={8} sm={10} xs={12}>
-                    <DataDisplay data={this.state.data} />
+                    {this.state.data && <DataDisplay data={this.state.data} />}
                   </Col>
                   <Col lg={2} md={2} sm={1} xs={0} />
                 </Row>
