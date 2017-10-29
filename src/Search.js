@@ -34,6 +34,7 @@ class Search extends Component {
   render(){
     return(
         <div className="pageContainer" onKeyDown={this.handleKeyPress}>
+          <div className="siteTitle">Community Health Index</div>
           <div className="searchBox">
             <FormGroup className="searchInput" controlId="searchInput">
               <FormControl
@@ -48,7 +49,6 @@ class Search extends Component {
                 className="searchButton"
                 bsStyle="primary"
                 bsSize="large"
-                disabled={this.state.value.length !== 5}
                 onClick={() => this.submit()}
             >
               Search

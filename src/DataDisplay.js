@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Bar} from 'react-chartjs-2';
+import {Bar, Radar} from 'react-chartjs-2';
 import {Grid, Col, Row, PageHeader} from 'react-bootstrap';
 
 class DataDisplay extends Component {
@@ -17,7 +17,7 @@ class DataDisplay extends Component {
               </Col>
             </Row>
             <Row>
-              <Col md={12} lg={12} sm={12}>
+              <Col md={8} lg={8} sm={8}>
                 <Bar data={{
                   labels: ["Water Quality", "Air Quality", "Land Quality", "Built Quality", "Social Quality", "Overall Quality", "Superfund Sites"],
                   datasets: [{
@@ -90,72 +90,79 @@ class DataDisplay extends Component {
                 }} />
 
               </Col>
+              <Col lg={4} md={4} sm={4}>
+                texto
+              </Col>
             </Row>
-            <Row>
-              <Col lg={12} md={12} sm={12}>
+            
+             <Row>
+              <Col lg={8} md={8} sm={8}>
                 <PageHeader>
                   Mortality
                 </PageHeader>
               </Col>
             </Row>
             <Row>
+              <Col lg={4} md={4} sm={4}>
+                texto
+              </Col>
               <Col md={12} lg={12} sm={12}>
-                <Bar data={{
+                <Radar data={{
                   labels: ["Heart", "Respiratory", "Injury", "Stroke", "Cancer"],
                   datasets: [{
                     label: this.props.data.city.city,
                     data: [this.props.data.city.Heart, this.props.data.city.Resp, this.props.data.city.Injury, this.props.data.city.Stroke, this.props.data.city.Cancer],
                     backgroundColor: [
-                      'rgba(255, 99, 132, 0.9)',
-                      'rgba(255, 99, 132, 0.9)',
-                      'rgba(255, 99, 132, 0.9)',
-                      'rgba(255, 99, 132, 0.9)',
-                      'rgba(255, 99, 132, 0.9)',
+                      'rgba(255, 99, 132, 0.4)',
+                      //'rgba(255, 99, 132, 0.9)',
+                      //'rgba(255, 99, 132, 0.9)',
+                      //'rgba(255, 99, 132, 0.9)',
+                      //'rgba(255, 99, 132, 0.9)',
                     ],
                     borderColor: [
                       'rgba(255,99,132,1)',
-                      'rgba(255,99,132,1)',
-                      'rgba(255,99,132,1)',
-                      'rgba(255,99,132,1)',
-                      'rgba(255,99,132,1)',
+                      //'rgba(255,99,132,1)',
+                      //'rgba(255,99,132,1)',
+                      //'rgba(255,99,132,1)',
+                      //'rgba(255,99,132,1)',
                     ],
-                    borderWidth: 1
+                    borderWidth: 2  
                   },{
                     label: this.props.data.city.state,
                     data: [this.props.data.state.Heart, this.props.data.state.Resp, this.props.data.state.Injury, this.props.data.state.Stroke, this.props.data.state.Cancer],
                     backgroundColor: [
+                      //'rgba(54, 162, 235, 0.9)',
+                      'rgba(54, 162, 235, 0.4)',
+                      /*'rgba(54, 162, 235, 0.9)',
                       'rgba(54, 162, 235, 0.9)',
-                      'rgba(54, 162, 235, 0.9)',
-                      'rgba(54, 162, 235, 0.9)',
-                      'rgba(54, 162, 235, 0.9)',
-                      'rgba(54, 162, 235, 0.9)',
+                      'rgba(54, 162, 235, 0.9)',*/
                     ],
                     borderColor: [
+                      //'rgba(54, 162, 235, 1)',
                       'rgba(54, 162, 235, 1)',
+                      /*'rgba(54, 162, 235, 1)',
                       'rgba(54, 162, 235, 1)',
-                      'rgba(54, 162, 235, 1)',
-                      'rgba(54, 162, 235, 1)',
-                      'rgba(54, 162, 235, 1)',
+                      'rgba(54, 162, 235, 1)',*/
                     ],
-                    borderWidth: 1
+                    borderWidth: 2
                   },{
                     label: "United States",
                     data: [this.props.data.country.Heart, this.props.data.country.Resp, this.props.data.country.Injury, this.props.data.country.Stroke, this.props.data.country.Cancer],
                     backgroundColor: [
-                      'rgba(255, 206, 86, 0.9)',
-                      'rgba(255, 206, 86, 0.9)',
-                      'rgba(255, 206, 86, 0.9)',
-                      'rgba(255, 206, 86, 0.9)',
-                      'rgba(255, 206, 86, 0.9)',
+                      //'rgba(255, 206, 86, 0.9)',
+                      //'rgba(255, 206, 86, 0.9)',
+                      'rgba(255, 206, 86, 0.4)',
+                      //'rgba(255, 206, 86, 0.9)',
+                      //'rgba(255, 206, 86, 0.9)',
                     ],
                     borderColor: [
-                      'rgba(255, 206, 86, 0.9)',
-                      'rgba(255, 206, 86, 0.9)',
-                      'rgba(255, 206, 86, 0.9)',
-                      'rgba(255, 206, 86, 0.9)',
-                      'rgba(255, 206, 86, 0.9)',
+                      //'rgba(255, 206, 86, 0.9)',
+                      //'rgba(255, 206, 86, 0.9)',
+                      'rgba(255, 206, 86, 1)',
+                      //'rgba(255, 206, 86, 0.9)',
+                      //'rgba(255, 206, 86, 0.9)',
                     ],
-                    borderWidth: 1
+                    borderWidth: 2
                   }]
                 }} />
 
