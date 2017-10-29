@@ -12,7 +12,23 @@
     height: 100vh;
     margin: 0;
     padding: 0;
-    background-color: #A4A8D1;
+    background-color: #f0eaea;
+    background-image: url("tinyTown.png");
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+
+.siteTitle{
+    width: 50vw;
+    height: 100px;
+    position: fixed;
+    top: 10vh;
+    left: 25vw;
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    color:#333333;
 }
 
 .searchBox{
