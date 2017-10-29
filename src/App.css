@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 .App {
     width: 100vw;
     height: 100vh;
@@ -10,7 +12,7 @@
     height: 100vh;
     margin: 0;
     padding: 0;
-    background-color: #E8E8E8;
+    background-color: #A4A8D1;
 }
 
 .searchBox{
@@ -30,6 +32,7 @@
     float: left;
     width: 120px;
     margin-left: 10px;
+    color: 
 }
 
 .staticMap{
@@ -73,5 +76,6 @@
 
 .dataContentInner{
     width: 100%;
-    border: 1px solid #000000;
+    font-family: 'Roboto', sans-serif;
+    /*border: 1px solid #000000;*/
 }
