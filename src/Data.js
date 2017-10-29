@@ -6,11 +6,28 @@ import DataDisplay from './DataDisplay';
 class Data extends Component {
   constructor(props){
     super(props);
-    this.state = {windowHeight: 1000, windowWidth: 300}
+    this.state = {windowHeight: 1000, windowWidth: 300, data: null}
   }
 
   componentWillMount(){
-    this.setState({windowHeight: window.innerHeight, windowWidth: window.innerWidth});
+    if(!this.props.match.params.zipcode || this.props.match.params.zipcode.length !== 5){
+      this.props.history.push(`/`);
+    }else{
+      fetch('/api/getData', {
+        method: 'POST',
+        headers: new Headers({
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        }),
+        body: JSON.stringify({
+          zip: this.props.match.params.zipcode,
+        }),
+      }).then(resp => resp.json()).then(data => {
+        this.setState({windowHeight: window.innerHeight, windowWidth: window.innerWidth, data});
+      }).catch(err => {
+        this.props.history.push(`/`);
+      });
+    }
   }
 
   render(){
@@ -27,7 +44,7 @@ class Data extends Component {
                     <Button className="searchAgainButton" onClick={() => this.props.history.push(`/`)}>Search Again</Button>
                   </Col>
                   <Col lg={8} md={8} sm={10} xs={12}>
-                    <DataDisplay />
+                    <DataDisplay data={this.state.data} />
                   </Col>
                   <Col lg={2} md={2} sm={1} xs={0} />
                 </Row>
